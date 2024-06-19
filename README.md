@@ -1,7 +1,3 @@
-# Almacenamiento de códigos de práctica
+# Práctica con PYTHON
 
-Se manteniene un este repositorio los códigos de practica con diferentes lenguajes
-
-> Cada lenguaje tendra su rama específica
-
-La rama main o master solo será la explicación del repositorio
+Se manteniene en este repositorio los códigos de practica con el lenguaje PYTHON
