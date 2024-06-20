@@ -21,6 +21,7 @@ let a = 10;
 // ideal para navegadores viejos
 // produce el resultado undefined cuando se llama antes de ser inicializado
 var b = 20;
+
 // const 
 const c = 30;
 
@@ -48,7 +49,30 @@ let almacenar = confirm("¿Estás seguro de almacenar esto?")
 
 console.log(almacenar);
 
+// OPERADOR SPREAD APLICADO A VARIABLES
+
+let usuario = {nombre:"pedro"};
+let new_usuario = {...a};
+new_usuario.nombre = "Bicho";
+
+// OPERADOR SPREAD APLICADO A FUNCIONES
+
+const cambiarNombre = ({...persona}) => {
+    persona.nombre = "Cristobal";
+    return persona;
+};
+
+let carlos = { nombre: "Carlos" };
+let cristobal = cambiarNombre(carlos);
+
+// OPERADOR SPREAD APLICADO A LISTAS
+
+const nombres = ["Cristobal","Nicolas","Miguel"];
+const otrosNombres = [...nombres];
+
 // OPERADORES
+
+
 
 
 // PALABRAS RESERVADAS
