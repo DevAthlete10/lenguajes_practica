@@ -1,78 +1,89 @@
-class Originador {
-   constructor() {
+
+
+class Album {
+    fotografias = [];
+    seleccionarFotografia;
+    index = 0;
+    constructor(fotografia) {
+     this.fotografia = fotografia;
+    }
+ 
+    registrar(){
+ 
+       this.fotografias.push(this.fotografia.crearFotografiaVersion());
+       this.index++;
+ 
+    }
+ 
+    retroceder(){
+       if (this.index > 0) {
+         this.index--;
+         this.seleccionarFotografia =  this.fotografias[this.index];
+       }
+       
+       console.log(`Retroceder ${this.index}`);
+     }
+     
+     adelantar(){
+       if (this.index < this.fotografias.length) {
+         this.index++;
+         this.seleccionarFotografia =  this.fotografias[this.index];
+       }
+       console.log(`Adelantar ${this.index}`);
+    }
+ 
+    getFotografias(){
+     return this.fotografias;
+    }
+ 
+    getFotografia(){
+     return this.seleccionarFotografia;
+    }
+ 
+ }
+ 
+ class Fotografia {
+   constructor(name) {
+    this.name = name;
    }
-   crearMemento(nombre){
-    return new Memento(nombre);
+ 
+   getNombre(){
+    return this.name;
    }
-   establecerMemento(memento){
-    memento.obtenerEstado();
+   setNombre(name){
+    this.name = name;
    }
-}
-
-
-class Memento {
-   constructor(nombre) {
-    this.nombre = nombre;
+ 
+   crearFotografiaVersion(){
+     return new FotografiaVersion(this.name);
    }
-   obtenerEstado(){}
-   establecerEstado(){}
-   
-}
-
-class Conserje {
-    mementos = [];
-   constructor() {    
-    this.index = 1;
-   }
-
-   addMemento(memento){
-    this.mementos.push(memento);  
-    this.index++;  
-   }
-
-   getMementos(){
-    return this.mementos;
-   }
-
-   retroceder(){
-    let memento;    
-    this.index--;
-        if (this.index > 0) {
-            memento = this.mementos[this.index-1];            
-        }
-        return memento;
-   }
-
-   adelantar(){
-    let memento;    
-    this.index++;
-        if (this.index <= this.mementos.length) {
-            memento = this.mementos[this.index-1];            
-        }
-        return memento;
-   }
-
-}
-
-
-const originador = new  Originador();
-let cristobal = originador.crearMemento("Cristobal");
-let nicolas = originador.crearMemento("Nicolas");
-let miguel = originador.crearMemento("Miguel");
-let mauricio = originador.crearMemento("Mauricio");
-let benjamin = originador.crearMemento("Benjamin");
-const conserjer = new Conserje();
-conserjer.addMemento(cristobal);
-conserjer.addMemento(nicolas);
-conserjer.addMemento(miguel);
-conserjer.addMemento(mauricio);
-conserjer.addMemento(benjamin);
-console.log(conserjer.getMementos());
-console.log(conserjer.retroceder());
-console.log(conserjer.retroceder());
-console.log(conserjer.retroceder());
-console.log(conserjer.adelantar());
-console.log(conserjer.adelantar());
-console.log(conserjer.retroceder());
+ 
+ }
+ 
+ class FotografiaVersion {
+    constructor(name) {
+     this.name = name;
+    }
+ 
+ }
+ 
+ const fotografia = new Fotografia("Cristobal");
+ const albumFotografias = new Album(fotografia);
+ albumFotografias.registrar();
+ fotografia.setNombre("Nicolas");
+ albumFotografias.registrar();
+ fotografia.setNombre("Mauricio");
+ albumFotografias.registrar();
+ fotografia.setNombre("Benjamin");
+ albumFotografias.registrar();
+ 
+ albumFotografias.retroceder();
+ albumFotografias.retroceder();
+ albumFotografias.retroceder();
+ albumFotografias.retroceder();
+ albumFotografias.adelantar();
+ albumFotografias.adelantar();
+ console.log(albumFotografias.getFotografia());
+ console.log(albumFotografias.getFotografias());
 
 

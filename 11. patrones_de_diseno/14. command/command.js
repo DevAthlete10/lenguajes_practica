@@ -7,6 +7,9 @@ la clasificación del desarrollador en ese momento:
 - Semi senior
 - Senior
 
+Aplica principalmente herencia y asociación 
+
+
 */
 
 class Tarea {
@@ -129,8 +132,6 @@ class CreandoArquitectura extends SeniorTarea {
 }
 
  class Gestor {
-    constructor() {
-    }
     solicitar(tarea){
         tarea.completar();
     }

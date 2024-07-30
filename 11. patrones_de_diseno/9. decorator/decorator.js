@@ -25,7 +25,7 @@ class AplicarMetodologiaConstructiva extends MuroBasico{
     }
 }
 
-class Drywall extends AplicarMetodologiaConstructiva {
+class AplicandoMetodoDrywall extends AplicarMetodologiaConstructiva {
 
     constructor(muroBasico) {
         super(muroBasico);
@@ -46,10 +46,10 @@ class Drywall extends AplicarMetodologiaConstructiva {
 }
 
 const muroDeYeso = new MuroDeYeso();
-const aplicarDrywallAlMuro = new Drywall(muroDeYeso);
+const aplicandoMetodoDrywall = new AplicandoMetodoDrywall(muroDeYeso);
 
 
 muroDeYeso.pintar();
 
-aplicarDrywallAlMuro.pintar();
+aplicandoMetodoDrywall.pintar();
 
