@@ -1,3 +1,4 @@
+import Factorizacion from "./1.aritmetica/factorizacion.js";
 import NumerosReales from "./1.aritmetica/numeros_reales.js";
 import {Angulo, tipoDeSistema} from "./geometria-y-trigonometria/angulos.js";
 
@@ -5,16 +6,9 @@ import {Angulo, tipoDeSistema} from "./geometria-y-trigonometria/angulos.js";
 const numerosReales = new NumerosReales();
 const angulo = new Angulo();
 
-let resp = numerosReales.esUnNumeroReal(0);
+const factorizacion = new Factorizacion();
 
-let convertirARadian = angulo.convertirGradoARadian(90);
-let convertirAGrado = angulo.convertirARadianAGrado(3/3);
+const numerosPrimosDelNumero = factorizacion.factorizacionPrima(1386);
 
-let convertirMinutoAGrado = angulo.convertirMinutoAGrado(47);
-let convertirSegundoAGrado = angulo.convertirSegundoAGrado(23);
-
-console.log(resp, convertirARadian, convertirAGrado);
-
-console.log(19+convertirMinutoAGrado+convertirSegundoAGrado);
-
+console.log(numerosPrimosDelNumero);
 
