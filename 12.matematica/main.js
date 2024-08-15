@@ -1,6 +1,6 @@
 import Factorizacion from "./1.aritmetica/factorizacion.js";
 import NumerosReales from "./1.aritmetica/numeros_reales.js";
-import {Angulo, tipoDeSistema} from "./geometria-y-trigonometria/angulos.js";
+import {Angulo} from "./geometria-y-trigonometria/angulos.js";
 
 
 const numerosReales = new NumerosReales();
