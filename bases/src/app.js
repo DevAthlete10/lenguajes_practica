@@ -25,3 +25,11 @@ const getPokemonById = require('./js-foundation/06-promises');
 const pokemon = getPokemonById(1)
     .then((pokemon) => console.log(pokemon))
     .catch((error) => console.log(`Error nuevo ${error}`));
+
+const { buidLogger } = require('./plugins');
+
+const logger = buidLogger('app.js');
+
+logger.log("Hola perros");
+
+logger.error("Error personal");
