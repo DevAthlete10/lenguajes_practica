@@ -1,0 +1,67 @@
+:root {
+    --colorPrimary: #fff12f;
+    --colorSecundary: #ffffff;
+  }
+  
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background-color: var(--colorPrimary);
+  }
+
+  .no-spinner {
+    -moz-appearance: textfield; /* Para Firefox */
+  }
+  
+  .no-spinner::-webkit-outer-spin-button,
+  .no-spinner::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }  
+  
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+  }
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+} 
+
+input {
+    margin: 5px;
+    border-radius: 20px;
+    border: solid var(--colorSecundary) 5px;
+    height: 30px;
+    width: 60%;
+    outline: none;
+}
+
+button {
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: solid var(--colorSecundary) 5px;
+    height: 30px;
+    width: 60%;
+}
+
+.ResultadoDeLaFactorizacion {
+    display: none;
+    position: relative;
+    margin: 15px 5px;
+    padding: 5px;
+    font-size: 25px;
+    background-color: var(--colorPrimary);
+    border: solid var(--colorSecundary) 5px;
+    border-radius: 20px;
+}

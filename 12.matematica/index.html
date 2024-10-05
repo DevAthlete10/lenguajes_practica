@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Matemáticas</title>
 </head>
 <body>
-    
+    <article class="Factorizacion">
+        <h2>Factorización</h2>
+        <section>
+            <h3>Factorizar primos de un número</h3>
+            <input type="number" placeholder="Número a factorizar" id="NumeroAFactorizar" class="no-spinner">  
+            <button type="submit" id="FactorizarPrimo">Obtener Primos</button>
+            <div class="ResultadoDeLaFactorizacion"> </div>
+        </section>        
+        <h2>Mínimo común multiplo (MCM) </h2>
+        <section>
+            <h3>Obtener el MCM</h3>
+            <input type="text" placeholder="Ej: 10-20" id="NumerosAObtenerMCM" class="no-spinner">  
+            <button type="submit" id="MCM">Obtener el MCM</button>
+            <div class="ResultadoMCM"> </div>
+        </section>        
+        <h2>Mini calculadora </h2>
+        <section>
+            <h3>Poner el signo de la operación entre los números (^=Potencia,x=Multiplicar,+=Sumar,-=Restar,/=Dividir) </h3>
+            <input type="text" placeholder="Ej: 10x20" id="NumerosACalcular" class="no-spinner">  
+            <button type="submit" id="Calcular">Obtener el resultado</button>
+            <div class="ResultadoCalculado"> </div>
+        </section>        
+    </article>
 </body>
 <script src="./main.js" type="module" ></script>
 </html>

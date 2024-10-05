@@ -1,9 +1,12 @@
+import NumerosPrimos from "./numerosPrimos.js";
+
 export default class Factorizacion {
    constructor() {
    }
 
    factorizacionPrima(numero) {
-        const PRIMOS = this.#numerosPrimos(100); 
+        const numerosPrimos = new NumerosPrimos();
+        const PRIMOS = numerosPrimos.numerosPrimos(); 
         let EncontradoTodosLosNumerosPrimos = false;
         let numerosPrimosDelNumero = []; 
         let MementoDelNumero = [];
@@ -29,20 +32,4 @@ export default class Factorizacion {
         });
         return organizacionDeNumeros;
    }
-
-   #numerosPrimos(limite){
-        let primos = [];
-        for (let index = 2; index < limite; index++) {
-            if (this.#esPrimo(index)) primos.push(index);        
-        }
-        return primos;
-   }
-
-   #esPrimo(numero){
-        for (let index = 2; index < numero; index++) {
-            if (numero % index === 0) return false; 
-        }
-        return numero !== 1;
-   }
-
 }
