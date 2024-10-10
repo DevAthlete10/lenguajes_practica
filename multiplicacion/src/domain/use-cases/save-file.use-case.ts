@@ -13,7 +13,7 @@ export class SaveFile implements SaveFileUseCase {
         
     }
     execute({
-        fileContent,
+        fileContent = '',
         fileDestination = 'outputs',
         fileName = 'table'
     }:Options){
