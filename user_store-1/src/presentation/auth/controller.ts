@@ -5,9 +5,7 @@ import { AuthService } from "../services/auth.services";
 export class AuthController {
     constructor(
         public readonly authService:AuthService
-    ) {
-        
-    }
+    ) {}
     private handleError = (error:unknown,res:Response)=>{
         if (error instanceof CustomError) {
             return res.status(error.statusCode).json({error:error.message});            
